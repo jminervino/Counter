@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter</title>
+    <title>Count</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
         <div class="container">
             <h1>Counter</h1>
-            <div class="count-number">0</div>
+            <span id="number">0</span>
             <div class="buttons">
-                <button>DECREASE</button>
-                <button>RESET</button>
-                <button>INCREASE</button>
+                <button onclick="decrementNumber()">Decrease</button>
+                <button onclick="resetNumber()">Reset</button>
+                <button onclick="incrementNumber()">Increase</button>
             </div>
         </div>
     </main>

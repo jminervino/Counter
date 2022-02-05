@@ -1,13 +1,32 @@
-let hour = 0
-let minute = 0
-let second = 0
-let millisecond = 0
 
-function pausar(){
-    let pausa = document.getElementById("pause")
-    return pausa
+let count = 0
+const numberString = window.document.getElementById("number")
+
+/**
+ * Função para mudar as cores, usando estrutura de controle
+ */
+function changeColor(){ 
+    if(count > 0){ 
+        numberString.style.color = "green"
+    } else if (count < 0){
+        numberString.style.color = "red"
+    } else {
+        numberString.style.color = "black"
+    }
 }
 
-do{
-    millisecond++
-}while(pausar() == true)
+function incrementNumber() {
+    numberString.innerText = ++count //incrementa +1 ao contador
+    changeColor()
+}
+
+function resetNumber() {
+    count = 0 // reseta o contador
+    numberString.innerText = 0
+    changeColor()
+}
+
+function decrementNumber() {
+    numberString.innerHTML = --count //decrementa -1 ao contador
+    changeColor()
+}
